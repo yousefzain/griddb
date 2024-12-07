@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Exam Entry Card</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:  #1a2f3f;
+            color: white;
+            padding: 10px 20px;
+            height: 60px;
+        }
+        .student-number {
+            font-size: 16px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+			font-family: 'Droid Arabic Kufi'
+        }
+        .menu-button {
+            background-color: white;
+            color: #5f7d4f;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .menu-button:hover {
+            background-color: #1a2f3f;	
+			}
+		 .box-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* Slightly whiter box */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .small-box {
+		    border-radius: 10px;
+		    border: 2px dotted black;
+            flex: 1;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .small-box span {
+            display: block;
+            font-size: 14px;
+            color: lightgray;
+            margin-bottom: 5px;
+        }
+        .small-box .value {
+            font-size: 16px;
+            color: red;
+        }
+        .print-button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .print-button:hover {
+            background-color: #0a751a;
+        }
+        .new-section {
+            display: none;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            text-align: center;
+				
+        }
+	
+				
+    </style>
+</head>
+<body style:"background-color#fcd0ca;">
+    <div class="top-bar">
+        <div class="student-number">:202210769</div>
+        <div class="title">الدائرة المالية - باقة دخول امتحان</div>
+        <button class="menu-button">☰ </button>
+    </div>
+
+    <div class="box-container">
+        <div class="small-box">
+            <span>الفصل</span>
+            <span class="value">20241</span>
+        </div>
+        <div class="small-box">
+            <span>للإمتحان</span>
+            <span class="value">النصف فصلي / الفصل الدراسي الأول 20241</span>
+        </div>
+        <div>
+            <button class="print-button" onclick="showNewSection()">طباعة البطاقة</button>
+        </div>
+    </div>
+
+    <div class="new-section" id="new-section"  ">
+        <h3 style:"color: #514c47y">عمرو ابراهيم محمد العمر </h3>
+		
+		
+		<img src= alt="Description of the image" width="200" height="200">
+		
+		
+		<h3>رقم الطالب: 202210769</h3>
+		<h3>التخصص: هندسة البرمجيات</h3>
+        <h3>تاريخ الطباعة: 03/12/2024</h3>
+    </div>
+
+    <script>
+        function showNewSection() {
+            const newSection = document.getElementById('new-section');
+            newSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
